@@ -54,17 +54,17 @@ function get(url) {
 
 
 
-// const data = get(weather__api);
+const data = get(weather__api);
 
-// data.then(
-//     (resolve) => {
-//         const {temp, pres, wind_spd} = resolve.data[0];
+data.then(
+    (resolve) => {
+        const {temp, pres, wind_spd} = resolve.data[0];
 
-//         temp__div.innerHTML = temp;
-//         hecto__div.innerHTML = pres;
-//         wind__div.innerHTML = wind_spd;
-//     }
-// ).catch(error => console.log(error));
+        temp__div.innerHTML = Math.floor(temp);
+        hecto__div.innerHTML = pres;
+        wind__div.innerHTML = wind_spd;
+    }
+).catch(error => console.log(error));
 
 // event handler
 city__input.addEventListener('keypress', function(e) {
