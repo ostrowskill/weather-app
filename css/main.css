@@ -11,22 +11,21 @@ body {
 .container {
   height: 100vh;
   overflow: hidden;
-  position: relative; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; }
   .container.day {
     background: linear-gradient(0deg, #e0ce72, #93e2dc); }
   .container.night {
     background: linear-gradient(0deg, #22454e, #0e1930); }
   .container .output {
-    position: absolute;
-    top: 37%;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+    margin-bottom: -10px;
+    position: relative; }
     .container .output .data {
       text-align: center;
       color: white; }
     .container .output .temp-value {
-      line-height: 92%;
+      line-height: 90%;
       font-size: 6rem;
       font-weight: 800; }
       .container .output .temp-value::after {
@@ -58,22 +57,18 @@ body {
       height: auto; }
   .container .input {
     background-color: white;
-    position: absolute;
-    top: 80%;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center; }
     .container .input .city-input {
       font-size: 1.1rem;
-      color: #acacac;
-      font-weight: 800;
+      font-weight: 400;
       text-align: center;
-      height: 40px;
+      color: #acacac;
+      padding: .5rem 1rem;
       border: 0;
-      border-bottom: 2px solid #ddd;
+      border-bottom: 1px solid #ddd;
       background: transparent; }
       .container .input .city-input::placeholder {
         font-weight: 300;

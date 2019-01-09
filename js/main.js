@@ -71,8 +71,6 @@ city__input.addEventListener('keypress', function(e) {
     if (e.keyCode == 13) {
         user__location = this.value;
         const new__api = `https://api.weatherbit.io/v2.0/history/daily?city=${user__location}&start_date=2019-01-04&end_date=2019-01-05&key=${key_two}`;
-        
-        console.log(new__api);
 
         const data = get(new__api);
         data.then(
@@ -82,7 +80,6 @@ city__input.addEventListener('keypress', function(e) {
                 temp__div.innerHTML = Math.floor(temp);
                 hecto__div.innerHTML = pres;
                 wind__div.innerHTML = wind_spd;
-
             }
         ).catch(
             error => console.log(error)
